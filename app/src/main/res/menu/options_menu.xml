@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/go_to_top"
+        android:title="Go to top"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_arrow_upward_black_24dp"/>
+    <item android:id="@+id/go_to_down"
+        android:title="Go to down"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_arrow_downward_black_24dp"/>
+    <item android:id="@+id/refresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        app:showAsAction="always"/>
+    <item android:id="@+id/about"
+        android:title="About"
+        app:showAsAction="never"/>
+
+</menu>

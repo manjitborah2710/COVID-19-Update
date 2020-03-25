@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">COVID-19 Update</string>
+    <string name="link_to_worldometer">For more info visit :  <a href="https://www.worldometers.info/coronavirus/">WorldOMeter</a>  &amp;  <a href="https://www.covidvisualizer.com/">COVID-19 Visualizer</a></string>
+    <string name="about"><u><b>About</b></u>\nDeveloper: Manjit Borah\nEmail: manjitborah2710@yahoo.com\n<center><a href="#">View code</a></center></string>
+</resources>
