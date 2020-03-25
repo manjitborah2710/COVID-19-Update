@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CountryDetailsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:focusedByDefault="true"
+    android:focusableInTouchMode="true">
     <TextView
         android:id="@+id/link_to_worldometer"
         android:padding="10sp"
