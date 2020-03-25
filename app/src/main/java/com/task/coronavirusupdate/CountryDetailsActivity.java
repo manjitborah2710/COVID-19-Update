@@ -1,26 +1,11 @@
 package com.task.coronavirusupdate;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.text.Html;
-import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
-import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,18 +13,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.task.coronavirusupdate.adapters.CustomRVAdapter;
 import com.task.coronavirusupdate.models.CountryDetail;
 import com.task.coronavirusupdate.utils.Scrape;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,7 +108,7 @@ public class CountryDetailsActivity extends AppCompatActivity implements SearchV
                     }).create().show();
                 }
                 populateList(countryDetails);
-                totalListings.setText("Total : "+(countryDetails.size()-1));
+                totalListings.setText("Total : "+countryDetails.size());
                 dialog.dismiss();
             }
         };
