@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -127,8 +128,11 @@ public class CountryDetailsActivity extends AppCompatActivity implements SearchV
         mainList.clear();
         masterList.clear();
         for(CountryDetail el:countryDetailList){
-            mainList.add(el);
-            masterList.add(el);
+            if(el.getCountry()!=null && !el.getCountry().trim().equals("")) {
+                mainList.add(el);
+                masterList.add(el);
+//                Log.d("mn","Bubu"+el.getCountry()+"Manjit");
+            }
         }
         adapter.notifyDataSetChanged();
         Toast.makeText(getApplicationContext(),"Info updated",Toast.LENGTH_SHORT).show();

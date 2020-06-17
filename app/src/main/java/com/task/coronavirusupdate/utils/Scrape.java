@@ -32,16 +32,24 @@ public class Scrape {
             Document document= Jsoup.connect(url).get();
             Element table=document.getElementById(table_id);
 
-            Elements table_header=table.select("tr th");
+            Elements table_header=table.select("thead tr th");
+            int first_val_col=0;
+            for(Element e:table_header){
+                if(e.text().toLowerCase().contains("country")) {
+                    first_val_col=e.elementSiblingIndex();
+                    Log.d("mn",first_val_col+" "+e.text());
+                    break;
+                }
+            }
 
             for(Element tr:table.getElementsByTag("tr")){
                 Elements table_data=tr.select("td");
 
                 if(table_data.size()==0) continue;
 
-                String country_name=table_data.get(0).text();
+                String country_name=table_data.get(first_val_col).text();
                 SpannableStringBuilder others_name=new SpannableStringBuilder();
-                for(int i=1;i<table_data.size();i++){
+                for(int i=first_val_col+1;i<table_data.size();i++){
 
                     String header=table_header.get(i).text();
 
